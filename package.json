@@ -1,14 +1,14 @@
 {
-  "name": "appetisingapps.com",
+  "name": "balboaclub.ie",
   "version": "0.0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "concurrently \"tailwindcss -i ./public/css/in.css -o ./public/css/out.css --watch -m\" \"serve public\""
+    "dev": "concurrently \"tailwindcss -i ./public/css/in.css -o ./public/css/out.css --watch -m\" \"alive-server --port=3000 public\""
   },
   "dependencies": {},
   "devDependencies": {
+    "alive-server": "^1.3.0",
     "concurrently": "^8.2.2",
-    "serve": "^14.2.1",
     "tailwindcss": "^3.4.0"
   }
 }
