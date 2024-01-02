@@ -3,15 +3,12 @@
   "version": "0.0.1",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "concurrently \"tailwindcss -i ./public/css/in.css -o ./public/css/out.css --watch\" \"serve public\""
+    "dev": "concurrently \"tailwindcss -i ./public/css/in.css -o ./public/css/out.css --watch -m\" \"serve public\""
   },
   "dependencies": {},
   "devDependencies": {
-    "concurrently": "^8.0.1",
-    "serve": "^14.2.0",
-    "tailwindcss": "^3.3.1"
-  },
-  "resolutions": {
-    "postcss": "^8.4.31"
+    "concurrently": "^8.2.2",
+    "serve": "^14.2.1",
+    "tailwindcss": "^3.4.0"
   }
 }
