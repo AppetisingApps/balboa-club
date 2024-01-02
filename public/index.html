@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full">
+<!DOCTYPE html class="h-full">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,51 +33,47 @@
     <link rel="stylesheet" href="/css/out.css" />
   </head>
 
-  <body class="h-full bg-gradient-to-b from-amber-300 to-red-400">
-    <div
-      class="max-w-3xl w-full px-6 py-10 mx-auto md:pt-20 flex flex-col h-full"
-    >
+  <body class="min-h-screen bg-gradient-to-b from-amber-300 to-red-400">
+    <div class="max-w-3xl w-full px-6 py-10 mx-auto md:pt-20">
       <div class="grow">
-        <div class="pt-10 md:pt-20">
+        <div class="pt-2 md:pt-20">
           <h1
-            class="text-3xl font-extrabold leading-snug tracking-tight text-slate-800 md:leading-none md:text-9xl border border-gray-800 border-8 border-dashed p-4"
+            class="text-7xl font-extrabold tracking-tight text-slate-800 md:leading-none md:text-9xl border border-gray-800 border-8 border-dashed p-4"
           >
-            Balboa <br> Club
+            <span>Balboa</span>
+            <span class="block">Club</span>
           </h1>
-          <div class="mt-1 text-xs text-right">Dublin, Ireland</div>
+          <div class="mt-1 text-sm text-right italic">Dublin, Ireland</div>
         </div>
-        <div class="pt-8 md:pt-16 font-sans">
+        <div class="pt-8 md:pt-16 font-sans font-medium">
           <div
-            class="text-lg leading-8 text-slate-900 md:leading-10 md:text-xl space-y-4"
+            class="text-lg leading-8 text-slate-900 md:leading-8 md:text-xl space-y-4"
           >
             <div>
               Balboa is a type of swing dance. The footwork is smaller than
-              Lindy Hop and it is typically danced to fast music.
+              Lindy Hop and it is typically danced to fast music. Balboa Club is
+              a new project in the Dublin swing dancing scene.
             </div>
             <div class="relative flex py-5 items-center">
               <div
                 class="flex-grow border-dashed border-t border-gray-800"
               ></div>
-              <span class="flex-shrink mx-4">Stay Up To Date</span>
+              <span class="flex-shrink mx-4 font-extrabold"
+                >Stay Up To Date</span
+              >
               <div
                 class="flex-grow border-dashed border-t border-gray-800"
               ></div>
             </div>
             <div>
               <a>Sign up for weekly newsletter with details of practice: </a
-              ><span class="underline hover:text-blue-600 cursor-pointer"
+              ><span class="underline text-blue-600 cursor-pointer"
                 >here</span
               >.
             </div>
             <div>
-              <a>Sign up for news of weekend workshops: </a
-              ><span class="underline hover:text-blue-600 cursor-pointer"
-                >here</span
-              >.
-            </div>
-            <div>
-              <a>Code of Conduct: </a
-              ><span class="underline hover:text-blue-600 cursor-pointer"
+              <a>Sign up for (infrequent) news of weekend workshops: </a
+              ><span class="underline text-blue-600 cursor-pointer"
                 >here</span
               >.
             </div>
@@ -86,14 +82,110 @@
               <div
                 class="flex-grow border-dashed border-t border-gray-800"
               ></div>
-              <span class="flex-shrink mx-4">Upcoming Practice</span>
+              <span class="flex-shrink mx-4 font-extrabold"
+                >Upcoming Practice</span
+              >
               <div
                 class="flex-grow border-dashed border-t border-gray-800"
               ></div>
             </div>
 
-            <div class="">
-              <div>Monday 8 January 2024: Mind The Step 8.30 - 10.30pm</div>
+            <div class="space-y-2">
+              <div>
+                <div>Monday 8 January 2024 · 8.30 - 10.30pm</div>
+                <div class="pl-8 font-light">
+                  <div class="text-sm">
+                    Location: Mind The Step, Great Strand St.
+                  </div>
+                  <div class="text-sm">Cost: €12</div>
+                  <div class="text-sm">
+                    Level: Must already know basic and preferably toss out
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Monday 15 January 2024 · 7 - 9pm</div>
+                <div class="pl-8 font-light">
+                  <div class="text-sm">Location: The Lír, Grand Canal Dock</div>
+                  <div class="text-sm">Cost: €12</div>
+                  <div class="text-sm">
+                    Level: Must already know basic and preferably toss out
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Monday 22 January 2024 · 7 - 9pm</div>
+                <div class="pl-8 font-light">
+                  <div class="text-sm">Location: The Lír, Grand Canal Dock</div>
+                  <div class="text-sm">Cost: €12</div>
+                  <div class="text-sm">
+                    Level: Must already know basic and preferably toss out
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Monday 29 January 2024 · 7 - 9pm</div>
+                <div class="pl-8 font-light">
+                  <div class="text-sm">Location: The Lír, Grand Canal Dock</div>
+                  <div class="text-sm">Cost: €12</div>
+                  <div class="text-sm">
+                    Level: Must already know basic and toss out
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Monday 12 February 2024 · 7 - 9pm</div>
+                <div class="pl-8 font-light">
+                  <div class="text-sm">Location: The Lír, Grand Canal Dock</div>
+                  <div class="text-sm">Cost: €12</div>
+                  <div class="text-sm">
+                    Level: Must already know basic and toss out
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative flex py-5 items-center">
+              <div
+                class="flex-grow border-dashed border-t border-gray-800"
+              ></div>
+              <span class="flex-shrink mx-4 font-extrabold"
+                >What is Balboa?</span
+              >
+              <div
+                class="flex-grow border-dashed border-t border-gray-800"
+              ></div>
+            </div>
+            <div>
+              <div>
+                Inspiration: <a href="https://www.youtube.com/watch?v=_ncACnpGxRw">Alice and Blake</a>
+              </div>
+              <div>
+                History of Balboa Blog Post
+                https://swungover.wordpress.com/2010/05/18/a-way-too-breif-history-of-balboa/
+              </div>
+              <div>
+                History of Slow Bal Interview with Mickey Fortanescue
+                https://www.youtube.com/watch?v=2KNio8c9n_c
+              </div>
+            </div>
+
+            <div class="relative flex py-5 items-center">
+              <div
+                class="flex-grow border-dashed border-t border-gray-800"
+              ></div>
+              <span class="flex-shrink mx-4 font-extrabold"
+                >Code of Conduct</span
+              >
+              <div
+                class="flex-grow border-dashed border-t border-gray-800"
+              ></div>
+            </div>
+            <div>
+              <a>Available </a
+              ><span class="underline hover:text-blue-600 cursor-pointer"
+                >here</span
+              >.
             </div>
             <!-- <a
               href="mailto:info@appetisingapps.com"
