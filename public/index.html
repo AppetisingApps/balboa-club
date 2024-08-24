@@ -1,6 +1,22 @@
 <!DOCTYPE html class="h-full">
 <html lang="en">
   <head>
+    <script>
+        function getNextWednesday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 is Sunday, 1 is Monday, ..., 6 is Saturday
+            const daysUntilNextWednesday = (3 - dayOfWeek + 7) % 7; // 3 is Wednesday
+            today.setDate(today.getDate() + daysUntilNextWednesday);
+
+            // Format date to a readable format (e.g., Wednesday, August 30, 2023)
+            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            return today.toLocaleDateString(undefined, options);
+        }
+
+        window.onload = function() {
+            document.getElementById("nextWednesday").innerText = getNextWednesday();
+        };
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Balboa Club, Dublin</title>
@@ -25,6 +41,7 @@
     <div class="max-w-3xl w-full px-6 py-10 mx-auto md:pt-12">
       <div class="grow">
         <div class="w-full flex justify-end">
+        <div class="italic text-xs flex items-center pr-2">Last Updated: 24 August 2024</div>
         <a href="https://www.instagram.com/balboaclub.ie" target="_blank" class="inline-flex items-center space-x-2">
           <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -44,6 +61,43 @@
           </svg>
         </div>
       </a>
+      <div
+        class="relative px-[1.3rem] mt-4 bg-white py-4 md:px-6 md:py-4 flex flex-col text-7xl font-extrabold tracking-tight text-slate-800 md:leading-none md:text-9xl border-gray-800 border-8 border-dashed"
+      >
+      <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-white text-xs md:text-base tracking-normal px-1 py-0 md:p-2 rounded md:rounded-lg border-2 border-gray-800">Weekly</div>
+        <div>Balboa</div>
+        <div>Club</div>
+        <div class="text-center text-2xl tracking-normal my-4">
+          Wednesday Drop-Ins
+          <br />
+          💃💃💃
+        </div>
+        <div class="text-base tracking-normal leading-8">
+          <div><span class="uppercase text-blue-600">Next Session: </span><span id="nextWednesday"></span></div>
+          <div><span class="uppercase text-blue-600">Format</span></div>
+          <div class="md:pl-8 font-light">
+          <div><span class="uppercase text-blue-600">19.30 - 20.10 </span>Intermediate/Level 3<div class="text-sm">All welcome but material is challenging. </div></div>
+          <div><span class="uppercase text-blue-600">20.10 - 21.00 </span>Improver/Level 2<div class="text-sm">All welcome but there is expected knowledge: up-hold & down-hold basic rhythms and out & ins.</div></div>
+          <div><span class="uppercase text-blue-600">21.00 - 21.30 </span>Guided Practice<div class="text-sm">'Rotate' is called and guidance.</div></div>
+          <div><span class="uppercase text-blue-600">21.30 </span>Social!</div>
+        </div>
+          <div><span class="uppercase text-blue-600">Price</span>
+            <div class="md:pl-8 font-light">
+              <div><span class="uppercase text-blue-600">1 class + practice </span>€12</div>
+              <div><span class="uppercase text-blue-600">2 classes + practice </span>€16</div>
+              <div><span class="uppercase text-blue-600">Entrance after 9pm </span>€5</div>
+              <div><span class="uppercase text-blue-600">People w/out a wage </span>50% off</div>
+            </div>
+          
+          </div>
+          <div><span class="uppercase text-blue-600">Location: </span>Basement of The Stag's Head, 1 Dame Court. It's easiest to enter via the side-door and go down the stairs, which will be on your left. It's the last door at end of the corridor.</div>
+          <div><span class="uppercase text-blue-600">Payment: </span>Pay at the door via Revolut @balboaclub</div>
+          <div><span class="uppercase text-blue-600">Teacher: </span>Lydia</div>
+          <div><span class="uppercase text-blue-600">Note: </span>If you are on holidays in Dublin and are a Balboa teacher elsewhere... If you are interested in being a guest teacher, please email! lydiaflynn100@gmail.com</div>
+            </div>
+      </div>
+    </div>
+          <div class="mt-1 text-sm text-right italic">Dublin, Ireland</div>
       <div
       class="relative px-[1.3rem] mt-4 bg-white py-4 md:px-6 md:py-4 flex flex-col text-7xl font-extrabold tracking-tight text-slate-800 md:leading-none md:text-9xl border-gray-800 border-8 border-dashed"
     >
@@ -168,32 +222,7 @@
           <img class="object-contain hidden md:block" type="image" src="/meta/Albert.jpg" />
         </div>
         </div>
-        <div
-        class="relative px-[1.3rem] mt-4 bg-white py-4 md:px-6 md:py-4 flex flex-col text-7xl font-extrabold tracking-tight text-slate-800 md:leading-none md:text-9xl border-gray-800 border-8 border-dashed"
-      >
-      <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-white text-xs md:text-base tracking-normal px-1 py-0 md:p-2 rounded md:rounded-lg border-2 border-gray-800">Weekly</div>
-        <div>Balboa</div>
-        <div>Club</div>
-        <div class="text-center text-2xl tracking-normal my-4">
-          Intermediate Drop-In
-          <br />
-          💃💃💃
-        </div>
-        <div class="text-base tracking-normal leading-8">
-          <div><span class="uppercase text-blue-600">Description: </span>The session where we keep the pace up with challenging material.</div>
-          <div><span class="uppercase text-blue-600">Level: </span>Intermediate (level 3)</div>
-          <div><span class="uppercase text-blue-600">Time & Day: </span>7.30pm - 9pm, Wednesdays. Guided Practice/Social after.</div>
-          <div><span class="uppercase text-blue-600">Location: </span>Basement of The Stag's Head</div>
-          <div><span class="uppercase text-blue-600">Teacher: </span>Lydia</div>
-          <div><span class="uppercase text-blue-600">Cost: </span>€12 or €6 for people without a wage</div>
-          <div><span class="uppercase text-blue-600">Payment: </span>Revolut @balboaclub</div>
-          <div><span class="uppercase text-blue-600">Note 1: </span>You are strongly encouraged to sign up for the newsletter (just drop me a line by email lydiaflynn100@gmail.com). The newsletter has a class plan with video links.</div>
-          <div><span class="uppercase text-blue-600">Note 2: </span>If you are new to Balboa and are comfortable with a little struggle, you would be most welcome! Email me and I will send you some homework links (beginner class recaps of steps) in advance.</div>
-          <div><span class="uppercase text-blue-600">Note 3: </span>If you are a dancer in Dublin for a holiday you are welcome to join provided you know the basics. If you are an experienced Balboa dancer and would be interested in being a guest teacher, please get in touch! lydiaflynn100@gmail.com</div>
-            </div>
-      </div>
-    </div>
-          <div class="mt-1 text-sm text-right italic">Dublin, Ireland</div>
+        
         <div class="pt-8 md:pt-16 font-sans font-light">
           <div
             class="text-lg leading-8 text-slate-900 md:leading-8 md:text-xl space-y-4"
