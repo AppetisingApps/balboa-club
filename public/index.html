@@ -9,12 +9,24 @@
             today.setDate(today.getDate() + daysUntilNextWednesday);
 
             // Format date to a readable format (e.g., Wednesday, August 30, 2023)
-            const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            const options = { weekday: 'long',year: 'numeric', month: 'short', day: 'numeric' };
+            return today.toLocaleDateString(undefined, options);
+        }
+
+        function getNextFriday() {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 is Sunday, 1 is Monday, ..., 6 is Saturday
+            const daysUntilNextFriday = (5 - dayOfWeek + 7) % 7; // 5 is Friday
+            today.setDate(today.getDate() + daysUntilNextFriday);
+
+            // Format date to a readable format (e.g., Friday, October 4, 2024)
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             return today.toLocaleDateString(undefined, options);
         }
 
         window.onload = function() {
             document.getElementById("nextWednesday").innerText = getNextWednesday();
+            document.getElementById("nextFriday").innerText = getNextFriday();
         };
     </script>
     <meta charset="UTF-8" />
@@ -96,7 +108,7 @@
       </div>
       <div class="text-base tracking-normal leading-8">
         <div><span class="uppercase text-blue-600">Description: </span>Join our Beginner Crash Course with the goal of dancing an entire song in Balboa! You'll learn the foundational steps like the up-hold and down-hold, master smooth in and outs, and get a taste of the most classic shape, the toss out. We'll also cover dynamic lollies and swivels, ensuring you have the basics to start dancing with confidence.</div>
-        <div><span class="uppercase text-blue-600">Level: </span>Beginner (level 1)</div>
+        <div><span class="uppercase text-blue-600">Level: </span>Beginner (level 1). After the course you will be able for improver sessions.</div>
         <div><span class="uppercase text-blue-600">Time & Date: </span>2–4pm and 5-7pm, Sunday 13 October 2024</div>
         <div><span class="uppercase text-blue-600">Location: </span>Mind the Step, Great Strand Street. (Session 1: Upstairs, Session 2: Downstairs)</div>
         <div><span class="uppercase text-blue-600">Teacher: </span>Lydia</div>
@@ -148,9 +160,9 @@
         Friday Improvers @Portobello
         <br />
         💃💃💃
-        <div class="text-sm font-light">Starting Friday 4 October 2024</div>
       </div>
       <div class="text-base tracking-normal leading-8">
+        <div><span class="uppercase text-blue-600">Next Session: </span><span id="nextFriday"></span></div>
         <div><span class="uppercase text-blue-600">Time: </span>7.45pm - 9.45pm (90 min class + 30 min social)</div>
         <div><span class="uppercase text-blue-600">Dates: </span>4 OCT, 11 OCT, 18 OCT, 1 NOV, 8 NOV, 15 NOV, 22 NOV 2024 (7 weeks)</div>
         <div><span class="uppercase text-blue-600">Description: </span>In this session, we will focus on mastering the fundamental moves of Balboa, including toss outs, out-and-ins, swivels, and transitions. Our emphasis will be on refining technique and maintaining the flow rather than on learning fancy material. Each session will also include a dedicated 15-minute segment on Slow Bal, opening up a whole new avenue of possibilities for dancing at a slower tempo and appreciating Slow Bal as a dance in its own right.</div>
